@@ -72,7 +72,7 @@ function checkAccessImproved() { //We need to close this curly bracket
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false; //This has to be a boolean
 
     for (let i = 0; i < addresses.length; i++) {
         const email = addresses[i];
@@ -80,7 +80,7 @@ function checkAccessImproved() { //We need to close this curly bracket
         if (userEmail.length > 5) {
 
             if (email === userEmail) {
-                grantAccess = 'true';
+                grantAccess = true;
 
             }
 
