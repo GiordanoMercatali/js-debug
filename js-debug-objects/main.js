@@ -56,7 +56,7 @@ const cars = [ //Some of the cars have the same type of fuel but written with th
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    }, //Comma needed here
     {
         manufacturer: 'Audi',
         model: 'R8',
@@ -64,14 +64,14 @@ const cars = [ //Some of the cars have the same type of fuel but written with th
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) => auto.type === 'benzina'); //Arrow function was declared in the wrong way
 
 const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+    return auto.type === 'diesel';          //We could also use toLowerCase to not remove all the upper cases from objects' "types."
 });
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+    return auto.type !== 'benzina' && auto.type !== 'diesel'; //Brackets required, also is not an "or" but an "and"
 });
 
 console.log('Auto a benzina');
