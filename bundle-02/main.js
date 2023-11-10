@@ -46,7 +46,7 @@ function addNumbers() {
 addNumbers();
 
 
-// ESERCIZIO 4
+// ESERCIZIO 4: Asks user their mail and grants access only if it's in the addresses array
 function checkAccess() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
     const userEmail = prompt('Inserisci il tuo indirizzo email');
@@ -57,7 +57,7 @@ function checkAccess() {
         grantAccess = 'true';
     }
 
-    if (grantAccess === true) {
+    if (grantAccess === 'true') { //Has to be string
         console.log('Accesso consentito!');
     } else {
         console.log('Accesso negato!');
