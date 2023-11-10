@@ -1,24 +1,24 @@
 const input = document.querySelector('input');
-const array = null;
+const array = []; //From null to empty array
 
 input.addEventListener('keypress', function(event) {
 
     if (event.code != 'Enter')    return;
-    if (input.value.length == '') return;
+    if (input.value.length == 0) return; // The value of length should not be a string, but a number 
 
-    array.add(input.value);
+    array.push(input.value); //Changed add with push
 
     const li = document.createElement('li');
     li.classList.add('list-group-item');
-    li.text = input.value;
-    document.querySelector('ul').push(li);
+    li.innerText = input.value; //Changed text with inner text
+    document.querySelector('ul').append(li); //Push only works with elements inside JS, use append to add something to HTML
 
-    let counter = '';
+    let counter = 0; //If we want "counter" to increase, we need it to be a number and not a string
     let item    = array[0];
-    const max   = 1;
+    let max   = 1; // "max"'s value should increase, but that's impossible if it's a const
     const elems = [];
 
-    for (let i = 0; i < array; i++) {
+    for (let i = 0; i < array.length; i++) { //Needed a .length after array
         let val = array[i];
 
         if (!elems[val]) {
@@ -27,19 +27,21 @@ input.addEventListener('keypress', function(event) {
             elems[val]++;
         }
 
-        for (let j = i; j < array.length; i++) {
+        for (let j = i; j < array.length; j++) { //Changed "i" with "j", to not increase "i" multiple times per loop
             if (array[i] == array[j]) {
                 counter++;
-                if (max < counter)
-                max  = counter;
-                item = array[i];
+                if (max < counter){
+                    max  = counter;
+                    item = array[i];
+            }
+                
             }
         }
 
         counter = 0;
     }
 
-    const alert = document.getElementsByClassName('alert');
+    const alert = document.querySelectorAll('.alert')[0]; //Changed getElementsByClassName with queryselector
 
     alert.classList.remove('d-none');
     alert.classList.add('d-flex');
@@ -47,5 +49,5 @@ input.addEventListener('keypress', function(event) {
     alert.querySelector('span:first-child').innerText = item;
     alert.querySelector('span:last-child').innerText = max;
 
-    console.log('${item} trovato ${max} volte');
+    console.log(`${item} trovato ${max} volte`); //Changed quotes to backticks
 });
