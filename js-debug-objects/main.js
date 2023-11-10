@@ -11,7 +11,7 @@
 
 
 // ESERCIZIO 1 (suggerimento: ci sono 6 errori)
-const cars = [
+const cars = [ //Some of the cars have the same type of fuel but written with the capital letter
     {
         manufacturer: 'Ford',
         model: 'Fiesta',
@@ -25,7 +25,7 @@ const cars = [
     {
         manufacturer: 'Volkswagen',
         model: 'Golf',
-        type: 'Benzina'
+        type: 'benzina'
     },
     {
         manufacturer: 'Fiat',
@@ -50,7 +50,7 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Kuga',
-        type: 'Diesel'
+        type: 'diesel'
     },
     {
         manufacturer: 'Seat',
@@ -60,7 +60,7 @@ const cars = [
     {
         manufacturer: 'Audi',
         model: 'R8',
-        type: 'Benzina'
+        type: 'benzina'
     },
 ];
 
