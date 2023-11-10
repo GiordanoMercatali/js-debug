@@ -10,23 +10,27 @@
 *******************************************************************************/
 
 
-// ESERCIZIO 1
+// ESERCIZIO 1 : Prints a message that changes depending on user's age.
 function checkAge() {
     const myAge = 32;
-    const message = '';
+    let message = ''; //Message has to be a let.
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
     } else {
         message = 'Hai più di 18 anni!';
     }
-}
-checkAge();
 
-// ESERCIZIO 2
+    return message; // Message has to be returned
+}
+let showMessage = checkAge();
+console.log(showMessage);
+
+// ESERCIZIO 2: Returns the amount of elements inside colors array
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+    return colors.length; // Has to return the length of the array
 }
 printColorsNumber();
 
@@ -62,7 +66,7 @@ checkAccess();
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
-function checkAccessImproved() {
+function checkAccessImproved() { //We need to close this curly bracket
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
@@ -117,3 +121,4 @@ function checkAccessImproved() {
 
 
 
+}
