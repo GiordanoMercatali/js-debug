@@ -51,13 +51,13 @@ function checkAccess() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;
 
     if (addresses.includes(userEmail)) {
-        grantAccess = 'true';
+        grantAccess = true;
     }
 
-    if (grantAccess === 'true') { //Has to be string
+    if (grantAccess === true) { //Has to be string or change the others to boolean
         console.log('Accesso consentito!');
     } else {
         console.log('Accesso negato!');
