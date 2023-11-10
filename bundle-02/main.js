@@ -35,9 +35,9 @@ function printColorsNumber() {
 printColorsNumber();
 
 
-// ESERCIZIO 3
+// ESERCIZIO 3: Asks user a number and sums it to another number.
 function addNumbers() {
-    const userNumber = prompt('Inserisci un numero');
+    let userNumber = parseInt(prompt('Inserisci un numero')); //User number has to be let and need a parseint.
     const total = userNumber + 12;
 
     console.log(`Il risultato finale è ${total}`);
